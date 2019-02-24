@@ -25,7 +25,7 @@ class Requestor extends CI_Controller {
 			$this->load->view('template/header.php');
 			$this->load->view('template/sidebar');
 			$this->load->view('template/nav');
-			$this->load->view('requestform');
+			$this->load->view('pages/requestform');
 			$this->load->view('template/footer.php');
 		}
 		else
@@ -38,10 +38,13 @@ class Requestor extends CI_Controller {
 
 	public function Requestorlist()
 	{
+		$data['get_details'] = $this->Datahandler->getRequestor();
+
+
 		$this->load->view('template/header.php');
 		$this->load->view('template/sidebar');
 		$this->load->view('template/nav');
-		$this->load->view('request_list');
-		$this->load->view('template/footer.php');
+		$this->load->view('pages/request_list',$data);
+		$this->load->view('template/footer');
 	}
 }

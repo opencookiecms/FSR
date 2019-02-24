@@ -97,7 +97,7 @@
                         </label>
                         <div class="col-md-5 col-sm-5 col-xs-12">
                           <textarea rows="5" class="form-control" name="special" type="text"></textarea>
-                          <input type="hidden" name="status" value="verify">
+                          <input type="hidden" name="status" value="In Progress">
                         </div>
                       </div>
                       <div class="ln_solid"></div>

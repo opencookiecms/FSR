@@ -30,4 +30,12 @@ class Datahandler extends CI_Model{
     return $this->db->insert('requestor',$data);
   }
 
+  public function getRequestor()
+  {
+    $this->db->select('*');
+    $this->db->from('requestor');
+    $query = $this->db->get();
+    return $query->result();
+  }
+
 }
